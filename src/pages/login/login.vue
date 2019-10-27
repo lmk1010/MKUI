@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+ <el-container>
     <el-header height="100px">
       <div>
         <el-row :gutter="3">
@@ -26,9 +26,9 @@
           </el-col>
         </el-row>
         <el-row :gutter="3">
-          <el-col :sm="{span:8,offset:8}" :xs="{span:24}">
+          <el-col :sm="{span:8,offset:8}" :xs="{span:32}">
             <el-form-item>
-              <el-button style="width:300px" size="medium" type="primary" @click="onSubmit" round>登陆</el-button>
+              <el-button style="width:450px" size="medium" type="primary" @click="onSubmit" round>登陆</el-button>
             </el-form-item>
           </el-col>
         </el-row>
@@ -48,10 +48,10 @@
 
 <script>
 
-import logo from '@/assets/Logo.png'
+import logo from './assets/Logo.png'
 
 export default {
-  name: "Login",
+  name: "login",
   data: function() {
     return {
       login_name: "",
