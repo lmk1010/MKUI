@@ -1,71 +1,67 @@
 <template>
- <el-container>
-    <el-header height="100px">
-      <div>
-        <el-row :gutter="3">
-          <el-col :sm="{span:6,offset:9}" :xs="{span:12,offset:6}">
-            <el-image :src="logo"></el-image>
-          </el-col>
-        </el-row>
-      </div>
-    </el-header>
-    <el-main>
-      <el-form ref="login_form">
-        <el-row :gutter="3">
-          <el-col :sm="{span:8,offset:8}" :xs="{span:24}">
-            <el-form-item>
-              <el-input type="text" v-model="login_name" placeholder="请输入用户名"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row :gutter="3">
-          <el-col :sm="{span:8,offset:8}" :xs="{span:24}">
-            <el-form-item>
-              <el-input type="password" placeholder="请输入密码" v-model="pass_word"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row :gutter="3">
-          <el-col :sm="{span:8,offset:8}" :xs="{span:32}">
-            <el-form-item>
-              <el-button style="width:450px" size="medium" type="primary" @click="onSubmit" round>登陆</el-button>
-            </el-form-item>
-          </el-col>
-        </el-row>
-      </el-form>
-    </el-main>
-    <el-footer>
-      <div>
-        <el-row :gutter="3">
-          <el-col :sm="{span:9,offset:8}" :xs="{span:24}">
-            <p>All CopyRight By Lmk Resloved！Since By 2019-2030 @Nexus Industry</p>
-          </el-col>
-        </el-row>
-      </div>
-    </el-footer>
-  </el-container>
+    <div class="page-header">
+        <div class="page-header-image" style="background-image:url(../../../static/images/login.jpg)"></div>
+         <div class="container">
+        <div class="col-md-12 content-center">
+            <div class="card-plain">
+                <form class="form" method="" action="">
+                    <div class="header">
+                        <div class="logo-container">
+                            <img src="../../../static/images/logo.svg" alt="">
+                        </div>
+                        <h5>MKOS</h5>
+                    </div>
+                    <div class="content">                                                
+                        <div class="input-group input-lg">
+                            <input type="text" class="form-control" placeholder="账户">
+                            <span class="input-group-addon">
+                                <i class="zmdi zmdi-account-circle"></i>
+                            </span>
+                        </div>
+                        <div class="input-group input-lg">
+                            <input type="password" placeholder="口令" class="form-control" />
+                            <span class="input-group-addon">
+                                <i class="zmdi zmdi-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <a href="index.html" class="btn btn-primary btn-round btn-lg btn-block ">LOG IN</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#" target="_blank">Contact Us</a></li>
+                        <li><a href="#" target="_blank">About Us</a></li>
+                        <li><a href="javascript:void(0);">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    &copy;
+                    <span>Resloved by <a href="#" target="_self">MK</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
 </template>
 
 <script>
 
-import logo from './assets/Logo.png'
-
 export default {
   name: "login",
-  data: function() {
-    return {
-      login_name: "",
-      pass_word: "",
-      logo:logo
-    };
-  },
   methods: {
     onSubmit() {
-      this.$notify({
-        title: "成功",
-        message: "这是一条成功的提示消息",
-        type: "success"
-      });
+      window.location.href="index.html"
+      // this.$notify({
+      //   title: "成功",
+      //   message: "这是一条成功的提示消息",
+      //   type: "success"
+      // });
     }
   }
 };
@@ -83,9 +79,10 @@ export default {
 .el-button {
   position: relative;
   margin-top: 30px;
+  width: 100%;
 }
 .el-footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 100px;
